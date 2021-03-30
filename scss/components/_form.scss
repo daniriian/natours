@@ -45,4 +45,13 @@
     opacity: 0;
     visibility: hidden;
   }
+
+  &__radio-group {
+    width: 49.5%;
+    display: inline-block;
+  }
+
+  &__radio-input {
+    color: $color-primary-light;
+  }
 }

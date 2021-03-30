@@ -7,7 +7,7 @@
     "node-sass": "^5.0.0"
   },
   "scripts": {
-    "compile:scss":"node-sass scss/main.scss css/style.css -w"
+    "compile_css": "node-sass scss/main.scss css/style.css -w"
   },
   "author": "",
   "license": "ISC"
