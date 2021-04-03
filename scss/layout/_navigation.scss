@@ -37,6 +37,16 @@
     box-shadow: 0 1rem 3rem rgba($color-black, 0.1);
     text-align: center;
 
+    @include respond(tab-port) {
+      top: 4rem;
+      right: 4rem;
+    }
+
+    @include respond(phone) {
+      top: 3rem;
+      right: 3rem;
+    }
+
     &:hover > .navigation__icon {
       &::before {
         top: -1rem;
@@ -90,9 +100,18 @@
       $color-primary-dark
     );
     z-index: 1000;
-
     transition: transform 0.7s cubic-bezier(0.86, 0, 0.07, 1);
     backface-visibility: hidden;
+
+    @include respond(tab-port) {
+      top: 4.5rem;
+      right: 4.5rem;
+    }
+
+    @include respond(phone) {
+      top: 3.5rem;
+      right: 3.5rem;
+    }
   }
 
   &__nav {
@@ -112,6 +131,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     list-style: none;
+    min-width: 35rem;
   }
   &__item {
     margin: 1rem;
