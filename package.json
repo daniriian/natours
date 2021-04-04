@@ -4,11 +4,22 @@
   "description": "",
   "main": "index.js",
   "devDependencies": {
-    "node-sass": "^5.0.0"
+    "autoprefixer": "^9.0.0",
+    "concat": "^1.0.3",
+    "node-sass": "^5.0.0",
+    "postcss": "^8.2.9",
+    "postcss-cli": "^8.3.1"
   },
   "scripts": {
-    "compile_css": "node-sass scss/main.scss css/style.css -w"
+    "watch-scss": "node-sass scss/main.scss css/style.css -w",
+    "serve": "live-server",
+    "concat": "concat -o css/output.css css/styles.css css/style.css",
+    "prefix": "postcss  --use autoprefixer -b 'last 10 versions' css/output.css -o css/prefix.css",
+    "minify": "node-sass css/prefix.css css/style.css --output-style compressed",
+    "build": "npm-run-all concat prefix minify",
+    "start": "npm-run-all --parallel serve watch-scss"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {}
 }
